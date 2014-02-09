@@ -16,3 +16,8 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+# git-wizzy
+wizzy 
+wizzy_config.yml
+.wizzy

@@ -1,0 +1,44 @@
+# Does Github have any new job opening?
+Simple utility that notifies by text every time that a new Github job is posted
+
+## Requirements
+- nokogiri
+- twilio-ruby
+- a twilio account 
+
+## Installation
+
+- Clone the repo
+
+``` git clone git@github.com:dbraga/new-github-jobs.git ```
+
+- Add your configuration
+- Run the script 
+
+``` ruby are_they_new_jobs.rb ```
+
+## Setup
+Simply change this part of the script. You can get sid, auth_token, and personal number from your Twilio account
+```
+# Configuration
+# Twilio account
+twilio_account_sid = '12345678910'
+twilio_auth_token = '12345678910'
+twilio_personal_phone_number = '+1415123456789'
+```
+
+## Pro-tip
+You could set up a crontab that will run every x minutes running this script for you e.g each minute
+
+``` * * * * * ruby are_they_new_jobs.rb ```
+
+## Contributing
+- Fork it
+- Create your feature branch (git checkout -b my-new-feature)
+- Commit your changes (git commit -am 'Added some feature')
+- Push to the branch (git push origin my-new-feature)
+- Create new Pull Request
+
+## Author
+
+new-github-jobs is developed by [Damiano Braga](https://github.com/dbraga)
