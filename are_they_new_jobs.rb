@@ -33,7 +33,8 @@ else
 end
 
 # Fetch jobs from the github page
-page.css('div.jobs-list ul li').each do |job|
+page.css('div.jobs-open-positions ul li').each do |job|
+  puts job
   job_name = job.text
   job_url = job.css('a')[0]['href']
   fetched_github_jobs.push( { job_name: job_name, job_url: job_url } )
@@ -63,3 +64,4 @@ if (current_github_jobs != fetched_github_jobs)
 else
   puts 'No new Jobs!'
 end
+
